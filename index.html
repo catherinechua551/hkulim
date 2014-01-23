@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- file penting jquery.min.js, jquery.mobile.min.js,jquery.mobile.min.css -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--  <link href="css/jquery.mobile.min.css" rel="stylesheet" type="text/css"> -->
+
+  <link rel="stylesheet" href="css/themes/customtheme.css" />
+  <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+  <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.0.min.css" />  <!-- original: <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" /> -->
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.mobile.min.js"></script>
+
+
+
+<!--  <title>jQuery Mobile page</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/themes/my-custom-theme.css" />
+  <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" /> 
+  <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script> 
+  <script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>  -->
+
+
+</head>
+
+<body>
+<!--Step 1 aka Page 1 -->
+<div data-role="page" id="page1">     <!-- mesti ada untuk satu page dalam versi 1.4 (tapi version 1.3 ada data-role ="content", id adalah untuk nama page-->
+  
+  <!--content -->
+  <div role="main" class="ui-content">
+  <center>
+	<h2>Selamat Datang</h2>
+	<img src="gambar/sejarah.jpg" />  
+
+
+	<font color="red"><h4>WEB MOBILE RASMI</font> <br/></h4>
+	<h4><font color="blue">HOSPITAL KULIM </br>Jalan Mahang, Kulim Kedah</font></h4>
+
+
+	<a href="#page2" class="ui-btn ui-btn-b" >MASUK</a> <!--refer to demo jquery transition-->
+
+	
+</center>
+  </div>
+  
+  
+
+</div>
+
+<!--Step 2 aka Page 2 -->
+<div data-role="page" id="page2" >     <!-- mesti ada untuk satu page dalam versi 1.4 (tapi version 1.3 ada data-role ="content", id adalah untuk nama page-->
+
+<!--pANEL-->
+<div data-role="panel" id="panel1" data-display="overlay">
+    <!-- panel content goes here -->
+	<h3>Senarai Mukasurat ada dibawah </h3>
+	<br/>
+	<ul data-role="listview">
+		<li><a href="luar1.html" data-transition="turn">Carta Organisasi</a></li>
+		<li><a href="luar2.html" data-transition="turn">Buletin 2011</a></li>
+		<li><a href="luar3.html" data-transition="turn">Pengarah Hospital</a></li>
+
+	</ul>		
+</div><!-- /panel -->
+
+	<!--header -->
+  <div data-role="header" data-position="fixed" data-add-back-btn="true" data-back-btn-text="Kembali" data-theme="c">  <!--add back button-->
+  <a href="#panel1" data-icon="bars" data-iconpos="notext">Menu</a>
+	<strong><h3><center>Sejarah</h3></strong></center>	
+  </div>
+  
+  <!--content -->
+  <div role="main" class="ui-content">
+  <center>
+	<h3>Latar Belakang</h3>
+	<img src="gambar/pengarahhkulim.jpg" />  
+	<br/>
+	
+	
+<a href="#pop1" class="ui-btn ui-btn-inline ui-btn-b" data-rel="popup" data-transition="pop">Kata Aluan Pengarah</a> <!--pop up Message-->
+
+<div data-role="popup" id="pop1">
+  <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+  <p>"Hospital kulim telah melaksanakan pengurusan kualiti menyeluruh (TQM) dengan menerima pakai beberapa standard kualiti yang telah ditentukan mengikut standard kebangsaan dan antarabangsa. 
+  Perlaksanaannya melibatkan penambahbaikan secara berterusan semua aspek kerja melalui struktur terkawal dan perancangan aktiviti yang memberi fokus kepada kualiti dan kepuasan pelanggan.
+  Hospital kulim juga akur pada pengurusan dan kawalan terhadap isu-isu yang berkaitan dengan keselamatan, persekitaran, peraturan, undang-undang dan keadilan sosial. 
+  <br/>
+  <br/>
+
+Dr. Asmayani Bt Khalib
+Pengarah Hospital Kulim.
+Kulim.
+Kedah DarulAman.
+</P>
+</div>
+	
+</center>
+     Hospital Kulim telah mula beroperasi di Pekan Kulim (Jalan Hospital Lama) semenjak tahun 1912. 
+	 Pada awal tahun 1990 pembinaan hospital baru telah dimulakan bagi menempatkan hospital ke tapak yang terletak kira-kira 5 kilometer dari Pusat Bandar Kulim. 
+	 Hospital Kulim yang baru, telah siap dibina pada tahun 1994 berkonsepkan Hospital Nukleus (Rujuk latar belakang Hospital Nukleus) di atas tanah seluas 25 hektar dan mula beroperasi pada bulan September 1994.
+	<br/>
+	<br/>
+	
+<!--
+
+<a href="#popupDialog" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-delete ui-btn-icon-left ui-btn-a">Laman Utama</a>  
+<a href="#page3" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-c" data-transition="flip">Visi dan Misi</a><!--pop up dialog // ui-icon-delete ui-btn-icon-left ui-btn-b for cross button close-->
+<!--
+
+<div data-role="popup" id="popupDialog" data-overlay-theme="b" data-theme="a" data-dismissible="false" style="max-width:400px;">
+    <div data-role="header" data-theme="b">
+    <h1>Laman Utama</h1>
+    </div>
+    <div role="main" class="ui-content">
+        <h3 class="ui-title">Kembali ke Laman Utama?</h3>  
+        <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-c" data-rel="back">Batal</a> <!-- data-rel="back" untuk stay the same page -->
+ 
+<!--
+ <a href="#page1" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-transition="flow">Laman Utama</a>		
+    </div>
+</div>
+
+-->
+
+<!-- <a href="#page3" class="ui-btn" data-transition="turn" data-direction="reverse">Misi, Visi Dan Objective</a> -->
+
+  </div>
+  
+  <!--footer -->
+ 
+
+   <div data-role="footer">
+        <div data-role="navbar">
+            <ul>
+				<li><a href="#" data-icon="star" class="ui-btn-active">SEJARAH</a></li>
+                <li><a href="#page3" data-icon="grid">VISI&&MISI</a></li>            
+                <li><a href="#page4" data-icon="gear">DIREKTORI</a></li>
+            </ul>
+        </div><!-- /navbar -->
+   </div><!-- /footer -->
+  
+  
+  
+</div>
+
+
+<!--Step 3 aka Page 3 -->
+<div data-role="page" id="page3" >     <!-- mesti ada untuk satu page dalam versi 1.4 (tapi version 1.3 ada data-role ="content", id adalah untuk nama page-->
+<!--panel-->
+<div data-role="panel" id="panel2" data-display="reveal">
+    <!-- panel content goes here -->
+	<h3>Senarai Mukasurat ada dibawah </h3>
+	<br/>
+	<ul data-role="listview">
+		<li><a href="#page2">Sejarah</a></li>
+		<li><a href="#page3">Visi dan Misi</a></li>
+		<li><a href="#page4">Direktori</a></li>
+	</ul>		
+</div><!-- /panel -->
+
+
+	<!--header -->
+  <div data-role="header" data-position="fixed" data-add-back-btn="true" data-theme="b">  <!--add back button-->
+    <a href="#panel2" data-icon="bars" data-iconpos="notext">Menu</a>
+	<strong><h3><center>VISI DAN MISI</h3></strong></center>
+	
+	
+  </div>
+  
+  <!--content -->
+  <div role="main" class="ui-content">
+  
+<center><p>VISI, MISI DAN OBJEKTIF <br/>	<font color="red"> HOSPITAL KULIM </font>
+</p>
+<img src="gambar/logohkulim.jpg" />  </center>
+<br/>
+	<div data-role="collapsible-set" >  <!-- original data-role="collapsible only tiada collapsible-set dan data-collapsed="false"-->
+		<div data-role="collapsible" data-collapsed="false"> 
+		<h4>VISI</h4>
+		<p>Hospital Kulim akan menjadi sebuah hospital yang sentiasa mengutamakan kualiti dan inovasi di dalam memberikan perkhidmatan Rawatan Perubatan serta mempunyai suasana persekitaran yang selesa dan menyenangkan pelanggan.
+		</p>
+		</div>
+		<div data-role="collapsible"> 
+		<h4>MISI</h4>
+		<p>Mencapai Wawasan Hospital Kulim Melalui Professionalisma Dikalangan Anggota Hospital, Mengamalkan Kerja Berpasukan , Memberi Perkhidmatan Penyayang Serta Mengadakan Perkongsian Bistari Dengan Lain Lain Sektor Awam, Swasta, Pertubuhan Bukan Kerajaan,  Masyarakat Dan Individu
+		</p>
+		</div>
+		<div data-role="collapsible"> 
+		<h4>OBJEKTIF</h4>
+		<p>Untuk Menyediakan Perkhidmatan Diagnostik, Rawatan Dan Rehabilitasi Yang Berkualiti, Cekap Dan Berkesan Dengan Tujuan Untuk Menyelamatkan Nyawa Dan Mengurangkan Kesakitan Supaya Pesakit Dapat Sembuh Secara Maksima Dalam Masa Yang Singkat
+		</p>
+		</div>
+	</div>
+
+<!-- listview original, data-inset untuk curve cantik
+<ul data-role="listview" data-inset="true"> 
+<li>VISI: Hospital Kulim akan menjadi sebuah hospital yang sentiasa mengutamakan kualiti dan inovasi di dalam memberikan perkhidmatan Rawatan Perubatan serta mempunyai suasana persekitaran yang selesa dan menyenangkan pelanggan.
+</li>
+<li>MISI: Mencapai Wawasan Hospital Kulim Melalui Professionalisma Dikalangan Anggota Hospital, Mengamalkan Kerja Berpasukan , Memberi Perkhidmatan Penyayang Serta Mengadakan Perkongsian Bistari Dengan Lain Lain Sektor Awam, Swasta, Pertubuhan Bukan Kerajaan,  Masyarakat Dan Individu
+</li>
+<li>OBJEKTIF: Untuk Menyediakan Perkhidmatan Diagnostik, Rawatan Dan Rehabilitasi Yang Berkualiti, Cekap Dan Berkesan Dengan Tujuan Untuk Menyelamatkan Nyawa Dan Mengurangkan Kesakitan Supaya Pesakit Dapat Sembuh Secara Maksima Dalam Masa Yang Singkat
+</li>
+</ul>  -->
+
+
+
+
+<br/>
+<a href="#page1"  data-transition="slidefade">Laman Utama</a>
+
+		
+
+  </div>
+  
+  <!--footer -->
+  <div data-role="footer">
+        <div data-role="navbar">
+            <ul>
+				<li><a href="#page2" data-icon="grid">SEJARAH</a></li>    
+				<li><a href="#" data-icon="star" class="ui-btn-active">VISI&&MISI</a></li>				
+                <li><a href="#page4" data-icon="gear">DIREKTORI</a></li>
+            </ul>
+        </div><!-- /navbar -->
+   </div><!-- /footer -->
+
+</div>
+
+
+<!--Step 4 aka Page 4 -->
+<div data-role="page" id="page4" >     <!-- mesti ada untuk satu page dalam versi 1.4 (tapi version 1.3 ada data-role ="content", id adalah untuk nama page-->
+<div data-role="panel" id="panel3" data-display="push" data-position="right" >
+    <!-- panel content goes here -->
+	<h3>Senarai Mukasurat ada dibawah </h3>
+	<br/>
+	<ul data-role="listview">
+		<li><a href="#page2">Sejarah</a></li>
+		<li><a href="#page3">Visi dan Misi</a></li>
+		<li><a href="#page4">Direktori</a></li>
+	</ul>		
+</div><!-- /panel -->
+	<!--header -->
+	
+  <div data-role="header" data-position="fixed" data-add-back-btn="true">  <!--add back button-->
+    <a href="#panel3" data-icon="bars" data-iconpos="notext">Menu</a>
+	<strong><h3><center>DIREKTORI</h3></strong></center>	
+  </div>
+  
+  <!--content -->
+  <div role="main" class="ui-content">  <!-- can put data-inset="true" untuk kecantikan-->
+  <div data-role="popup" id="popupMenuazrinah" data-theme="b">
+		<ul data-role="listview" data-inset="true">
+			<li><a href="tel:+6044272733">Telefon</a></li>
+			<li><a href="sms://+6044272733">Hantar SMS</a></li>
+			<li><a href="mailto:azrinah@moh.gov.my">Hantar Email</a></li>           
+		</ul>
+  </div> 
+  
+  <div data-role="popup" id="popupMenusiva" data-theme="b">
+			<a href="tel:+6044272733" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-notext ui-icon-phone ui-btn-inline"></a>
+			<a href="sms://+6044272733" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-notext ui-icon-action ui-btn-inline"></a>
+			<a href="mailto:siva@moh.gov.my" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-notext ui-icon-mail ui-btn-inline"></a>		
+  </div>
+  <div data-role="popup" id="popupMenunajihah" data-theme="b">
+		<ul data-role="listview" data-inset="true">
+			<li><a href="tel:+6044272733">Telefon</a></li>
+			<li><a href="sms://+6044272733">Hantar SMS</a></li>
+			<li><a href="mailto:najihah@moh.gov.my">Hantar Email</a></li>           
+		</ul>
+  </div>
+  <div data-role="popup" id="popupMenukhoo" data-theme="b">
+		<ul data-role="listview" data-inset="true">
+			<li><a href="tel:+6044272733">Telefon</a></li>
+			<li><a href="sms://+6044272733">Hantar SMS</a></li>
+			<li><a href="mailto:khoo@moh.gov.my">Hantar Email</a></li>           
+		</ul>
+  </div>
+  <div data-role="popup" id="popupMenupengarah" data-theme="b">
+		<ul data-role="listview" data-inset="true">
+			<li><a href="tel:+6044272733">Telefon</a></li>
+			<li><a href="sms://+6044272733">Hantar SMS</a></li>
+			<li><a href="mailto:asmayani@moh.gov.my">Hantar Email</a></li>           
+		</ul>
+  </div>
+ <!-- <div data-role="popup" id="popupMenuhaji" data-theme="b">
+		<ul data-role="listview" data-inset="true">
+			<li><a href="tel:+6044272733">Telefon</a></li>
+			<li><a href="sms://+6044272733">Hantar SMS</a></li>
+			<li><a href="mailto:haji@moh.gov.my">Hantar Email</a></li>           
+		</ul>
+  </div> -->
+	
+	<ul data-role="listview" data-filter="true" data-filter-placeholder="Taipkan Nama"> 
+		<li><a href="#popupMenuazrinah" data-rel="popup" data-transition="slideup">
+		<img src="gambar/azrinah.jpg" width="150"/>
+		<h3>Dr.Azrinah Bt Azuar</h3>
+		<p>Pengarah Hospital</P></a>	
+		</li>	
+		<li><a href="#popupMenusiva" data-rel="popup" data-transition="slideup">
+		<img src="gambar/siva.jpg" width="150"/>
+		<h3>Pn.Sivakami A/P Muniandy</h3>
+		<p>Penolong Pengarah Hospital</p></a>	
+		</li>				
+		<li><a href="#popupMenunajihah" data-rel="popup" data-transition="slideup">
+		<img src="gambar/najihah.jpg" width="150"/>
+		<h3>Dr.Najihah Bt Idris</h3>
+		<p>Ketua Direktorat Perubatan</p></a>
+		</li>		
+		<li><a href="#popupMenukhoo" data-rel="popup" data-transition="slideup">
+		<img src="gambar/khoo.jpg" width="150"/>
+		<h3>Dr.Khoo Kay Teong</h3>
+		<p>Ketua Perunding Hospital</P></a>
+		</li>
+		<li><a href="#popupMenupengarah" data-rel="popup" data-transition="slideup">
+		<img src="gambar/pengarahhkulim.jpg" width="150"/>
+		<h3>Dr.Asmayani Bt Khalib</h3>
+		<p>Bekas Pengarah Hospital</P></a>		
+		</li>	
+		<li>
+		<img src="gambar/pakar.png" width="150"/>
+		<h3>Dr.Hj Abd Rahman Hasan</h3>
+		<p>Bekas Pakar Hospital</P>
+		<p>
+		<a href="tel:+6044272733" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-notext ui-icon-phone ui-btn-inline"></a>
+		<a href="sms://+6044272733" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-notext ui-icon-action ui-btn-inline"></a>
+		<a href="mailto:haji@moh.gov.my" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-notext ui-icon-mail ui-btn-inline"></a>	
+		</p>
+		</li>		
+	</ul>	
+
+  </div>
+  
+  <!--footer -->
+ <div data-role="footer">
+        <div data-role="navbar">
+            <ul>
+				<li><a href="#page2" data-icon="grid">SEJARAH</a></li>   						
+                <li><a href="#page3" data-icon="gear">VISI&&MISI</a></li>
+				<li><a href="#" data-icon="star" class="ui-btn-active">DIRECTORI</a></li>				
+            </ul>
+        </div><!-- /navbar -->
+   </div><!-- /footer -->
+
+
+</div>
+
+</body>
+</html>
+
